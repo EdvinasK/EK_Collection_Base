@@ -6,8 +6,14 @@ namespace EK_Collection_Base
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
+            string[] colorOptions = { "Red", "Green", "Blue" };
+
+            foreach(var color in colorOptions)
+            {
+                Console.WriteLine(color.ToUpper());
+            }
+
+            Console.ReadKey();
         }
     }
 }
