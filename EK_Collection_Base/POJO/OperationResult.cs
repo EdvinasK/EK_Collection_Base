@@ -30,7 +30,9 @@ namespace EK_Collection_Base.POJO
     /// Provides a success flag and message
     /// useful as a method return type.
     /// </summary>
-    public class OperationResult<TResult, TMessage>
+    public class OperationResult<TResult, TMessage> 
+        where TResult : struct 
+        where TMessage : struct
     {
         public OperationResult()
         {
@@ -45,6 +47,7 @@ namespace EK_Collection_Base.POJO
         public TResult Result { get; }
         public TMessage Message { get; }
     }
+
 
     /// <summary>
     /// Provides a decimal amount of message
