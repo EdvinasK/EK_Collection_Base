@@ -17,5 +17,30 @@ namespace EK_Collection_Base.Entities
             this.Name = name;
             return new OperationResult<string>(Name, "Name changed");
         }
+
+        public override string ToString()
+        {
+            return $"{Name}({Id})";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || this.GetType() != obj.GetType())
+                return false;
+
+            //Client compareClient = obj as Client;
+
+            if (obj is Client compareClient &&
+                this.Id == compareClient.Id &&
+                this.Name == compareClient.Name)
+                return true;
+
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
