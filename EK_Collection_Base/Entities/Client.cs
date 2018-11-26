@@ -1,4 +1,5 @@
 ﻿using EK_Collection_Base.POJO;
+using EK_Collection_Base.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,29 @@ namespace EK_Collection_Base.Entities
                 return true;
 
             return base.Equals(obj);
+        }
+
+        /// <summary>
+        /// Sends an email to a set of clients
+        /// </summary>
+        /// <param name="clients">Clients to send email to.</param>
+        /// <param name="message">Message body to send to clients.</param>
+        /// <returns>A list of sent messages after formating.</returns>
+        public static List<string> SendEmail(ICollection<Client> clients, string message)
+        {
+            var confirmations = new List<string>();
+            var emailService = new EmailService();
+
+            foreach(var client in clients)
+            {
+                var subject = $"Important message for: {client.Name}";
+                var confirmation = emailService.SendMessage(subject,
+                                                            message,
+                                                            client.Name);
+                confirmations.Add(confirmation);
+            }
+
+            return confirmations;
         }
 
         public override int GetHashCode()

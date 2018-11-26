@@ -2,6 +2,7 @@ using EK_Collection_Base.Entities;
 using EK_Collection_Base.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BaseTests
 {
@@ -45,6 +46,22 @@ namespace BaseTests
 
             //Act
             var actual = repository.Retrieve();
+
+            //Assert
+            Assert.AreEqual(expected, actual.Count);
+        }
+
+        [TestMethod]
+        public void RetrieveAsDictionaryTest()
+        {
+            //Arrange
+            var repository = new ClientRepository();
+            var expected = 2;
+
+            //Act
+            var actual = repository.Retrieve();
+
+            var clients = actual.ToDictionary(c => c.Id);
 
             //Assert
             Assert.AreEqual(expected, actual.Count);
