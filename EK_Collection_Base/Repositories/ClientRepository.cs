@@ -15,7 +15,7 @@ namespace EK_Collection_Base.Repositories
         /// Retrieves all of the approved clients
         /// </summary>
         /// <returns></returns>
-        public List<Client> Retrieve()
+        public ICollection<Client> Retrieve()
         {
             if(Clients == null)
             {
@@ -28,6 +28,21 @@ namespace EK_Collection_Base.Repositories
 
             Clients.ForEach(c => Console.WriteLine(c));
             Console.WriteLine(Clients[0]);
+
+            return Clients;
+        }
+
+        /// <summary>
+        /// Retrieves all of the approved clients
+        /// </summary>
+        /// <returns></returns>
+        public Client[] RetrieveArray()
+        {
+            var Clients = new Client[2]
+            {
+                new Client() { Id = 1, Name = "Ross" },
+                new Client() { Id = 2, Name = "Rachel" }
+            };
 
             return Clients;
         }
