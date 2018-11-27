@@ -33,6 +33,21 @@ namespace EK_Collection_Base.Repositories
         }
 
         /// <summary>
+        /// Retrieves all of the approved clients, one at a time.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Client> RetrieveWithIterator()
+        {
+            this.Retrieve();
+
+            foreach(var client in Clients)
+            {
+                Console.WriteLine($"Client Id: {client.Id}");
+                yield return client;
+            }
+        }
+
+        /// <summary>
         /// Retrieves all of the approved clients
         /// </summary>
         /// <returns></returns>
