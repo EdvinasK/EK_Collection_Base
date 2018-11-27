@@ -50,6 +50,7 @@ namespace EK_Collection_Base.Entities
             var confirmations = new List<string>();
             var emailService = new EmailService();
 
+
             foreach(var client in clients)
             {
                 var subject = $"Important message for: {client.Name}";
