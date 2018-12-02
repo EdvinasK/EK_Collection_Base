@@ -18,10 +18,12 @@ namespace EK.Common
                 {
                     if (char.IsUpper(letter))
                     {
+                        result = result.Trim();
                         result += " ";
                     }
                     result += letter;
                 }
+                result = result.Trim();
             }
 
             return result;
