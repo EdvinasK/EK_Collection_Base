@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseTests", "BaseTests\Base
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EK.Common", "EK.Common\EK.Common.csproj", "{A2CE908A-EA01-43C4-A950-11FD6725FF53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTests", "CommonTests\CommonTests.csproj", "{EB244960-15E7-4B90-95AC-32982111BCB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{A2CE908A-EA01-43C4-A950-11FD6725FF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2CE908A-EA01-43C4-A950-11FD6725FF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2CE908A-EA01-43C4-A950-11FD6725FF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB244960-15E7-4B90-95AC-32982111BCB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB244960-15E7-4B90-95AC-32982111BCB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB244960-15E7-4B90-95AC-32982111BCB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB244960-15E7-4B90-95AC-32982111BCB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C42EBFA0-FA64-4DF2-8A51-6B0288A27177} = {5661A577-EB34-4289-AB6E-A3D72C0539A1}
+		{EB244960-15E7-4B90-95AC-32982111BCB8} = {5661A577-EB34-4289-AB6E-A3D72C0539A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8AC2C65-FF07-45D4-9E20-9DF7CA65EE46}
