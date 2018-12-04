@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EK.Common\EK.Common.csproj" />
+    <ProjectReference Include="..\EK_Collection_Base\EK_Collection_Base.csproj" />
   </ItemGroup>
 
 </Project>

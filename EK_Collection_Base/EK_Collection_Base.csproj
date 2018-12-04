@@ -10,4 +10,8 @@
     <Folder Include="Factories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EK.Common\EK.Common.csproj" />
+  </ItemGroup>
+
 </Project>

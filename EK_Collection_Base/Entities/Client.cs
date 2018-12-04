@@ -1,4 +1,5 @@
-﻿using EK_Collection_Base.POJO;
+﻿using EK.Common;
+using EK_Collection_Base.POJO;
 using EK_Collection_Base.Services;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EK_Collection_Base.Entities
 {
-    public class Client
+    public class Client : EntityBase, ILoggable
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -66,6 +67,18 @@ namespace EK_Collection_Base.Entities
         public override int GetHashCode()
         {
             return base.GetHashCode();
+        }
+
+        public override bool Validate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Log()
+        {
+            var logString = $"Id:{Id}, Name:{Name}";
+
+            return logString;
         }
     }
 }
